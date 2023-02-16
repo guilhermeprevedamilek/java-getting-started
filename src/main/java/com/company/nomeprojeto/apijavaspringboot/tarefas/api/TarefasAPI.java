@@ -36,7 +36,7 @@ public class TarefasAPI {
   @PutMapping("/{id}")
   // @ResponseBody
   public TarefaDTO atualizar(@PathVariable("id") Long tarefaId, @RequestBody TarefaDTO tarefaDTO) {
-    return tarefasFacade.criar(tarefaDTO);
+    return tarefasFacade.atualizar(tarefaDTO, tarefaId);
   }
 
   @GetMapping
